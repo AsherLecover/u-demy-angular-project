@@ -44244,8 +44244,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
      */
 
 
-    function noop() {// Do nothing.
-    }
+    function noop() {} // Do nothing.
+
     /**
      * @fileoverview added by tsickle
      * Generated from: packages/core/src/linker/element_ref.ts
