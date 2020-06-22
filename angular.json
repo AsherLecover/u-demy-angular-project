@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "u-demy-angular-project": {
+    "recipes": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/u-demy-angular-project",
+            "outputPath": "dist/recipes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "u-demy-angular-project:build"
+            "browserTarget": "recipes:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "u-demy-angular-project:build:production"
+              "browserTarget": "recipes:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "u-demy-angular-project:build"
+            "browserTarget": "recipes:build"
           }
         },
         "test": {
@@ -90,6 +90,8 @@
             ],
             "styles": [
               "src/styles.css"
+
+
             ],
             "scripts": []
           }
@@ -111,15 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "u-demy-angular-project:serve"
+            "devServerTarget": "recipes:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "u-demy-angular-project:serve:production"
+              "devServerTarget": "recipes:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "u-demy-angular-project"
+    }
+  },
+  "defaultProject": "recipes",
+  "cli": {
+    "analytics": false
+  }
 }
